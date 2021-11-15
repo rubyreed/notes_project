@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const Notes = (props) => {
@@ -15,9 +14,12 @@ const Notes = (props) => {
     });
   };
 
-  return <div>
+  return (
+    <div>
+    <a href = "/notes/new">New Page</a>
     <p>Notes: {renderNotes()}</p>;
   </div>
+  );
 };
 
 // export component
