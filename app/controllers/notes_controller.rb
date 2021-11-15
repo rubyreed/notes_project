@@ -12,4 +12,8 @@ class NotesController < ApplicationController
     Note.create(title:params[:note][:title], description: params[:note][:description])
 redirect_to notes_path
     end
+    def destroy
+        Note.find(params[:id]).delete
+        redirect_to notes_path
+        end
 end

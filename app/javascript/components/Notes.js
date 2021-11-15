@@ -6,7 +6,8 @@ const Notes = (props) => {
   const renderNotes = () => {
     return props.notes.map((note) => {
       return (
-      <div>
+      <div style={{margin:"20px", border:'1px solid'}}>
+        <a href={`/notes/${note.id}`} data-method="delete">Delete a Note</a>
         <h1>{note.title}</h1>
         <p>{note.description}</p>
       </div>
@@ -16,7 +17,7 @@ const Notes = (props) => {
 
   return (
     <div>
-    <a href = "/notes/new">New Page</a>
+    <a href = "/notes/new">Add a Note</a>
     <p>Notes: {renderNotes()}</p>;
   </div>
   );
