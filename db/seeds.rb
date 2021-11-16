@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "faker"
+Note.destroy_all
 
 10.times do
 Note.create(
